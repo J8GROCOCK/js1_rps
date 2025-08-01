@@ -103,12 +103,16 @@ function game(){
 
     }
 
+    console.log(`Final Score: \nWins: ${wins} \nLosses: ${losses} \nTies: ${ties}`);
     if (wins > losses) {
         //win msg
+        console.log("You Win!");
     } else if (losses > wins) {
         // lose msg
+        console.log("You Lose");
     } else {
         // tie msg
+        console.log("You Draw!");
     }
 
 
