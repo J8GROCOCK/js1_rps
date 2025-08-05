@@ -13,11 +13,11 @@ function playerSelect() {
         if (input === null) return undefined;
 
         let playerSelection;
-        if (options.includes(input.toLowerCase())) {
-            playerSelection = input.toLowerCase()
+        if (options.includes(input.toLowerCase().trim())) {
+            playerSelection = input.toLowerCase().trim()
             return playerSelection;
         } else {
-            console.log(`${input} is not a valid option!`)
+            console.log(`${input} is not a valid option! Try again!`)
         }
     }
 
@@ -83,7 +83,8 @@ function game(){
     let wins = 0;
     let losses = 0;
     let ties = 0;
-    console.log("Welcome to Rock, Paper, Scissors!")
+    console.log("Welcome to Rock, Paper, Scissors!");
+    console.log("There will be 5 rounds, you will select rock, paper or scissors and face off against the computer!");
 
     for(let i = 0; i < 5; i++) {
         const computerSelection = computerPlay();
@@ -109,7 +110,7 @@ function game(){
         console.log("You Win!");
     } else if (losses > wins) {
         // lose msg
-        console.log("You Lose");
+        console.log("You Lose!");
     } else {
         // tie msg
         console.log("You Draw!");
