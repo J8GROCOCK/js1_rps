@@ -101,7 +101,7 @@ function game(){
         } else {
             ties++;
         }
-        console.log(`Current Score (round ${i} of 5): \nWins: ${wins} \nLosses: ${losses} \nTies: ${ties}`);
+        console.log(`Current Score (round ${i+1} of 5): \nWins: ${wins} \nLosses: ${losses} \nTies: ${ties}`);
     }
 
     console.log("\nGame Over!")
